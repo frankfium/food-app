@@ -14,14 +14,6 @@ app.get('/api/restaurants', async (req, res) => {
     let response = await fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&opennow=${opennow}&type=restaurant&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
     let data = await response.json();
 
-    if (data.next_page_token) {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-
-        response = await fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=${data.next_page_token}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
-        const moreData = await response.json();
-        data.results = data.results.concat(moreData.results);
-    }
-
     res.send(data);
 });
 

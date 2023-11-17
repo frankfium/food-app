@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(55, 55, 55);
+  background-color: #373737;
   font-family: 'Arial', sans-serif;
 }
 
@@ -48,12 +48,13 @@ header {
 .picked-restaurant {
   font-size: 20px;
   font-weight: bold;
+
 }
 
 .restaurant-list {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 20px 40px;
 }
 
 .restaurant-list-item {
@@ -62,12 +63,12 @@ header {
 }
 .input-field {
   margin-bottom: 10px;
-  padding-bottom: 10%;
+  padding: 20px 40px;
 }
 .input-checkbox {
   margin-right: 10px;
-  padding-bottom: 10%;
+padding: 20px 40px;
+}
 .input-field label {
   margin-right: 10px;
-}
 }
